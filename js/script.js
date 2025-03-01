@@ -107,3 +107,23 @@ function squareFunction(){
 squareFunction()
 
 /* --------------------- MEDIUM --------------------- */
+
+function isPerfectNum(num){
+    if(num < 6){
+        alert(`Число менше 6 не досконале`); 
+        return false;
+    } 
+
+    let sum = 1;
+    for(let i = 2; i < num; i++){
+        if(num % i === 0){
+            sum += i;
+        }
+    }
+    if(sum === num) alert(`Число ${num} - досконале`);
+    else{
+        alert(`Число ${num} - не досконале`);
+    }
+}
+
+isPerfectNum(7)
