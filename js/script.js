@@ -85,7 +85,27 @@ function userTime() {
     alert(`Ось весь час: ${userHours.userHour}:${userHours.userMinute}:${userHours.userSecond}`);
 }
 
-userTime();
+// userTime();
 
 
+// online time
 
+function updateClock() {
+    const currentTime = new Date(); 
+    const blockCurrentTime = document.getElementById('clock');
+    let currentHours = currentTime.getHours();
+    let currentMinutes = currentTime.getMinutes();
+    let currentSeconds = currentTime.getSeconds();
+    currentMinutes = (currentMinutes < 10 ? "0" : "") + currentMinutes;
+    currentSeconds = (currentSeconds < 10 ? "0" : "") + currentSeconds;
+    let allTime = (`${currentHours}:${currentMinutes}:${currentSeconds}`);
+    blockCurrentTime.textContent = allTime;
+    currentMinutes = (currentMinutes < 10 ? "0" : "") + currentMinutes;
+    currentSeconds = (currentSeconds < 10 ? "0" : "") + currentSeconds;
+}
+
+// Оновлювати годинник кожну секунду
+setInterval(updateClock, 1000);
+
+// Викликати функцію один раз, щоб відразу показати час без затримки
+updateClock();
