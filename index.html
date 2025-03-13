@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson_35 DOM JS</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="someClass body">
+<!-- початок бади -->
+    <header class="header">
+        <h1 class="header__title">DOM JavaScript from Beetroot!</h1>
+    </header>
+    <main class="main">
+        <button class="modal__open" onclick="openModalWindow()">Open modal window</button>
+        <section class="modal" id="modal">
+            <article class="modal-content">
+                <button class="modal__close" onclick="closeModalWindow()"> Close modal window</button>
+                <div class="text" id="songs">
+                    <h2>Songs</h2>
+                    <button class="btn__songs" id="btn__songs" onclick="playListFunction();">Songs</button>
+                </div>
+                <div class="traffic-light text">
+                    <div class="light red-dark"></div>
+                    <div class="light yellow-dark"></div>
+                    <div class="light green-dark"></div>
+                  </div>
+            </article>
+        </section>
+        <!-- Блок текст -->
+        <section class="text">
+            <h2>Title</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas recusandae rerum dicta est quas culpa fuga quae molestiae in autem esse ipsum maxime quia ut, obcaecati ducimus perferendis, veritatis aut numquam! Harum commodi rem repudiandae laboriosam veritatis impedit, aperiam tenetur qui iusto ipsum ipsa nisi ipsam beatae autem doloribus molestias quae, enim quod eaque, labore possimus deserunt quisquam accusantium? Esse?</p>
+        </section>
+    </main>
+    <script src="./js/script.js"></script>
+</body>
+</html>
