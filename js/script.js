@@ -60,7 +60,11 @@ function closeModalWindow(){
 
 
 /*--------------------------- MAXIMUM ---------------------------*/
+        let currentLight = 0;
+        function changeLight() {
+            const lights = ['red', 'yellow', 'green'];
+            document.getElementById(lights[currentLight]).classList.remove(lights[currentLight]);
 
-function trafficLightFunction(){
-  
-}
+            currentLight = (currentLight + 1) % lights.length;
+            document.getElementById(lights[currentLight]).classList.add(lights[currentLight]);
+        }

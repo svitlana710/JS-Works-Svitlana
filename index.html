@@ -20,11 +20,12 @@
                     <h2>Songs</h2>
                     <button class="btn__songs" id="btn__songs" onclick="playListFunction();">Songs</button>
                 </div>
-                <div class="traffic-light text">
-                    <div class="light red-dark"></div>
-                    <div class="light yellow-dark"></div>
-                    <div class="light green-dark"></div>
-                  </div>
+                <div class="traffic-light">
+                    <div id="red" class="light red-dark"></div>
+                    <div id="yellow" class="light yellow-dark"></div>
+                    <div id="green" class="light green-dark"></div>
+                </div>
+                  <button onclick="changeLight()">Change Light</button>
             </article>
         </section>
         <!-- Блок текст -->
