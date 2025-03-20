@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuerry</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+</head>
+<body class="someClass body">
+    <header class="header">
+        <div class="header__logo">
+            <img src="./assets/svg/logo.svg" alt="header__logo">
+        </div>
+        <nav class="header__nav">
+            <a href="#" class="header__link"><button class="header__btn">Home</button></a>
+            <a href="#" class="header__link"><button class="header__btn">Catalog</button></a>
+            <a href="#" class="header__link"><button class="header__btn">News</button></a>
+            <a href="#" class="header__link"><button class="header__btn">Contacts</button>  </a> 
+        </nav>
+        <div class="header__icons">
+            <img src="./assets/svg/search-icon.svg" alt="header__search">
+            <img src="./assets/svg/profile-icon.svg" alt="header__profile">
+        </div>
+    </header>
+    <main class="main">
+        <section class="slider">
+            <div class="slide slide_background">
+                <div class="slide__content sl-content ">
+                    <h2 class="sl-content__title">DISCOVER NEW OPTIONS</h2>
+                    <button class="slide__btn">VIEW MORE</button>
+                </div>
+                <img src="./assets/img/image-1.png" alt="" class="slide__img">
+                <div class="slide__blur"></div>
+            </div>
+            <div class="slide">
+                <div class="slide__content sl-content">
+                    <h2 class="sl-content__title">EXPAND YOUR HORIZONS</h2>
+                    <button class="slide__btn">VIEW MORE</button>
+                </div>
+                <img src="./assets/img/image-2.png" alt="" class="slide__img">
+                <div class="slide__blur"></div>
+            </div>
+            <div class="slide">
+                <div class="slide__content sl-content">
+                    <h2 class="sl-content__title">FIND YOUR OWN STYLE</h2>
+                    <button class="slide__btn">VIEW MORE</button>
+                </div>
+                <img src="./assets/img/image-3.png" alt="" class="slide__img">
+                <div class="slide__blur"></div>
+            </div>
+        </section>
+        <section class="arrivals">
+            <h2 class="arrivals__title">NEW ARRIVALS</h2>
+            <article class="arrivals__products">
+                <div class="arrivals__products-block">
+                    <div class="arrivals__products-stock">IN STOCK</div>
+                    <img src="./assets/img/image-4.png" alt="first-guitare">
+                    <p class="arrivals__products-text">Hagstrom Alvar Limited Edition</p>
+                    <p class="arrivals__products-price">€2.990,00</p>
+                </div>
+                <div class="arrivals__products-block">
+                    <div class="arrivals__products-stock">IN STOCK</div>
+                    <img src="./assets/img/image-5.png" alt="first-guitare">
+                    <p class="arrivals__products-text">Hagstrom Tremar Viking Deluxe Cloudy Seas</p>
+                    <p class="arrivals__products-price">€1.300,00</p>
+                </div>
+                <div class="arrivals__products-block arrivals__products-soldblock">
+                    <div class="arrivals__products-stock arrivals__products-lightstock">SOLD</div>
+                    <img src="./assets/img/image-6.png" alt="first-guitare">
+                    <p class="arrivals__products-text">Gibson Les Paul Standard 60s</p>
+                    <p class="arrivals__products-price">€3.749,00</p>
+                </div>
+                <div class="arrivals__products-block">
+                    <div class="arrivals__products-stock">IN STOCK</div>
+                    <img src="./assets/img/image-7.png" alt="first-guitare">
+                    <p class="arrivals__products-text">Suhr Standard Plus Trans Blue Denim</p>
+                    <p class="arrivals__products-price">€3.449,00</p>
+                </div>               
+                <div class="arrivals__products-block">
+                    <div class="arrivals__products-stock">IN STOCK</div>
+                    <img src="./assets/img/image-8.png" alt="first-guitare">
+                    <p class="arrivals__products-text">Fender Telecaster Black Paisley Limited Edition</p>
+                    <p class="arrivals__products-price">€1.499,00</p>
+                </div>
+                <div class="arrivals__products-block">
+                    <div class="arrivals__products-stock">IN STOCK</div>
+                    <img src="./assets/img/image-10.webp" alt="ninth-guitare">
+                    <p class="arrivals__products-text">IBANEZ GRG121DX BKF</p>
+                    <p class="arrivals__products-price">€2.600,00</p>
+                </div>
+            </article>
+            <button class="arrivals__btn">VIEW MORE</button>
+        </section>
+        <section class="partners">
+            <h2 class="partners__title">OUR PARTNERS</h2>
+            <article class="partners__block">
+                <div class="partners__img"><img src="./assets/svg/epiphone.svg" alt="epiphone"></div>
+                <div class="partners__img"><img src="./assets/svg/esp.svg" alt="esp"></div>
+                <div class="partners__img"><img src="./assets/svg/gibson.svg" alt="gibson"></div>
+                <div class="partners__img"><img src="./assets/svg/engl.svg" alt="engl"></div>
+                <div class="partners__img"><img src="./assets/svg/roland.svg" alt="roland"></div>
+                <div class="partners__img"><img src="./assets/svg/fender.svg" alt="fender"></div>
+                <div class="partners__img"><img src="./assets/svg/peavey.svg" alt="peavey"></div>
+                <div class="partners__img"><img src="./assets/svg/marshal.svg" alt="marshal"></div>
+                <div class="partners__img"><img src="./assets/svg/orange.svg" alt="orange"></div>
+                <div class="partners__img"><img src="./assets/svg/ibanez.png" alt="ibanez"></div>
+            </article>
+        </section>
+    </main>
+    <footer class="footer">
+        <img src="./assets/svg/logo-light.svg" alt="logo-light">
+        <nav class="footer__nav">
+            <a href="#" class="footer__nav-link">Home</a>
+            <a href="#" class="footer__nav-link">Catalog</a>
+            <a href="#" class="footer__nav-link">News</a>
+            <a href="#" class="footer__nav-link">Contacts</a>
+        </nav>
+        <ul class="footer__contacts">
+            <li class="footer__list">Contact Us</li>
+            <li class="footer__list">
+             <svg class="icon">
+                <use xlink:href="./assets/svg/sprite.svg#instagram"></use>
+              </svg>
+              <svg class="icon">
+                <use xlink:href="./assets/svg/sprite.svg#facebook"></use>
+              </svg>
+              <svg class="icon">
+                <use xlink:href="./assets/svg/sprite.svg#pinterest"></use>
+              </svg>
+              <svg class="icon">
+                <use xlink:href="./assets/svg/sprite.svg#twitter"></use>
+              </svg>
+              <svg class="icon">
+                <use xlink:href="./assets/svg/sprite.svg#youtube"></use>
+              </svg>
+            </li>
+            <li class="footer__list">0800 300 4040</li>
+        </ul>
+        <p class="footer__text">© Copyright 2022. All rights reserved.</p>
+    </footer>
+    <script src="./js/jquery.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./js/slider.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+.slider {
+    position: relative;
+}
+
+.slide {
+    position: relative;
+    max-height: 700px;
+
+    &__content {
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        padding: 25px;
+        color: #fff;  
+        z-index: 999;  
+        font-family: 'Montserrat';
+        color: rgba(248, 241, 234, 1);
+        font-size: 50px;
+        font-weight: 700;
+        width: 600px;
+        text-align: center;
+    }
+
+    // &_background {
+
+    // }
+
+    &__img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+
+    &__blur{
+        width: 100%;
+        height: 700px;
+        position: absolute;
+        pointer-events: none;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.84) 0%, rgba(217, 217, 217, 0) 100%);
+        z-index: 998;
+        top: 0px;
+    }
+
+    .slide__btn{
+        width: 227px;
+        height: 52px;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 500;
+        background-color: transparent; 
+        border: 2px solid #fff;
+        font-family: 'Montserrat';
+
+        &:hover{
+            cursor: pointer;
+            border: none;
+            background-color: #F16A50;
+            transition: all ease-in-out 0.25s;
+        }
+    }
+}
+
+// default classes
+
+.slick-dots {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    position: absolute;
+    bottom: 50px;
+    right: 45%;
+    transform: translateY(-50%);
+
+    button{
+        border-radius: 100px;
+        width: 20px;
+        height: 20px;
+        font-size: 0px;
+        border: none;
+        background-color: #F8F1EAB2;
+        cursor: pointer;
+    }
+}
+
+.slick-active{
+
+   & button{
+        background-color: #F16A50;
+    }
+}
+// .slick-arrow {
+     
+// }
+
+.slider{
+    .slick-prev, .slick-next, .slick-arrow{
+    position: absolute;
+    background: #fff;
+    border: none;
+    font-size: 0px;
+}
+
+}
+
+.partners__block{
+    .slick-arrow{
+        position: absolute;
+        width: 40px;
+        height: 74px;
+        background: transparent;
+        z-index: 999;
+        border: none;
+    }
+    
+    .slick-prev{
+        right: 1210px;
+        bottom: 10px;
+
+        & svg{
+            right: 1px;
+            top: 20px;
+            width: 40px;
+            height: 74px;
+            position: absolute;
+            z-index: 999;
+
+            &:hover{
+                cursor: pointer;
+                fill: #F16A50;
+                transition: all ease-in-out .2s;
+            }
+        }
+    }
+
+
+
+    .slick-next{
+        left: 1200px;
+        bottom: 10px;
+
+        & svg{
+            left: 1px;
+            top: 20px;
+            width: 40px;
+            height: 74px;
+            position: absolute;
+            z-index: 999;
+
+            &:hover{
+                cursor: pointer;
+                fill: #F16A50;
+                transition: all ease-in-out .2s;
+            }
+        }
+    }
+}
+
+.arrivals__products{
+    .slick-arrow{
+        position: absolute;
+        width: 40px;
+        height: 74px;
+        background: transparent;
+        z-index: 999;
+        border: none;
+    }
+    
+    .slick-prev{
+        right: 1210px;
+        bottom: 10px;
+
+        & svg{
+            right: 20px;
+            bottom: 170px;
+            width: 40px;
+            height: 74px;
+            position: absolute;
+            z-index: 999;
+
+            &:hover{
+                cursor: pointer;
+                fill: #F16A50;
+                transition: all ease-in-out .2s;
+            }
+        }
+    }
+
+
+
+    .slick-next{
+        left: 1200px;
+        bottom: 10px;
+
+        & svg{
+            left: 20px;
+            bottom: 170px;
+            width: 40px;
+            height: 74px;
+            position: absolute;
+            z-index: 999;
+
+            &:hover{
+                cursor: pointer;
+                fill: #F16A50;
+                transition: all ease-in-out .2s;
+            }
+        }
+    }
+}
