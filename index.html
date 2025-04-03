@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monticello</title>
+    <link rel="preload" href="./assets/img/img-1.webp" as="image">
+    <style>
+        .header-slick .slick-dots,
+        .news-slick .slick-dots {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+        }
+
+        .header-slick .slick-dots li,
+        .news-slick .slick-dots li {
+            list-style: none;
+            border: 1px solid #fff;
+            border-radius: 50px;
+            width: 14px;
+            height: 14px;
+            background-color: transparent;
+        }
+
+        .header-slick .slick-dots .slick-active,
+        .news-slick .slick-dots .slick-active {
+            background-color: #fff;
+        }
+
+        .header-slick {
+            position: relative;
+        }
+
+        .header-slick .slick-dots {
+            position: absolute;
+            top: 350px;
+            left: 1348px;
+            z-index: 4;
+            transform: rotate(90deg);
+        }
+
+        .header-slick .slick-dots li {
+            font-size: 0;
+        }
+
+        .news {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: url(./assets/img/img-16.webp) no-repeat center;
+            position: relative;
+        }
+
+        .news::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.8;
+            background: linear-gradient(237.1deg, #24CCFA 11.16%, #3C7FD4 89.18%);
+            z-index: 0;
+        }
+
+        .news-titles {
+            width: 327px;
+            height: 84px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 90px;
+        }
+
+        .news-titles::before {
+            content: '';
+            width: 100px;
+            height: 0;
+            border: 1px solid #fff;
+        }
+
+        .news-titles__title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 44px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .news-slick {
+            position: relative;
+            z-index: 1;
+            width: 1170px;
+            height: auto;
+            display: flex;
+
+        }
+
+        .news-slick__slide {
+            width: 370px;
+            margin-right: 30px;
+            height: auto;
+            background-color: #fff;
+        }
+
+        .news-slick__slide:last-child {
+            margin-right: 0;
+        }
+
+        .news-slick__slide img {
+            width: 370px;
+            height: auto;
+        }
+
+        .news-slick__title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 22px;
+            color: #2C4058;
+            margin-top: 30px;
+            margin-left: 20px;
+        }
+
+        .news-slick__text {
+            font-family: 'Sans', sans-serif;
+            font-weight: 400;
+            font-size: 18px;
+            color: #2C4058;
+            margin-top: 15px;
+            margin-left: 20px;
+        }
+
+        .news-slick__author {
+            width: 186px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            margin-top: 39px;
+            justify-content: space-between;
+            margin-left: 20px;
+        }
+
+        .news-slick__author img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50px;
+        }
+
+        .news-slick__name {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            font-size: 18px;
+            color: #2C4058;
+            margin: 0;
+            margin-bottom: 3px;
+        }
+
+        .news-slick__year {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            font-size: 14px;
+            color: #55B7FF;
+            margin: 0;
+            margin-top: 3px;
+        }
+
+        .news-slick__info {
+            width: auto;
+            margin-left: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .slick-arrow {
+            width: 40px;
+            height: 40px;
+            font-size: 0px;
+            border: 1px solid #fff;
+            border-radius: 50px;
+            background-color: transparent;
+            transform: rotate(90deg);
+            margin-right: 60px;
+            position: absolute;
+            z-index: 999;
+            top: 230px;
+            right: 1170px;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $('.header-slick').slick({
+                autoplay: true,
+                infinite: true,
+                autoplaySpeed: 4000,
+                dots: true,
+                speed: 1500,
+                fade: true,
+            });
+        });
+    </script>
+    <link rel="preload" href="./css/slider.css" as="style" onload="this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="./css/slider.css">
+    </noscript>
+    <link rel="preload" href="./css/style.css" as="style" onload="this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="./css/style.css">
+    </noscript>
+    <link rel="icon" href="./assets/img/Logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="preload" href="./assets/fonts/Montserrat-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="./assets/img/img-9.webp" as="image">
+    <link rel="preload" href="./assets/img/img-8.webp" as="image">
+</head>
+
+<body>
+
+    <header class="header" id="header">
+        <nav class="header-nav">
+            <img src="./assets/img/Logo.svg" alt="header-logo" loading="lazy">
+    
+            <button class="burger-menu" aria-label="Toggle Navigation">
+                <span class="burger-menu__line"></span>
+                <span class="burger-menu__line"></span>
+                <span class="burger-menu__line"></span>
+            </button>
+    
+            <ul class="header-list">
+                <li class="header-list__elem">
+                    <a href="#header" class="header-list__link">
+                        <div class="header-list__ellipse"></div>ABOUT US
+                    </a>
+                </li>
+                <li class="header-list__elem">
+                    <a href="#projects" class="header-list__link">
+                        <div class="header-list__ellipse"></div>PROJECTS
+                    </a>
+                </li>
+                <li class="header-list__elem">
+                    <a href="#news" class="header-list__link">
+                        <div class="header-list__ellipse"></div>NEWS
+                    </a>
+                </li>
+                <li class="header-list__elem">
+                    <a href="#contacts" class="header-list__link">
+                        <div class="header-list__ellipse"></div>CONTACT
+                    </a>
+                </li>
+            </ul>
+    
+            <div class="header-contacts">
+                <a href="https://www.facebook.com/" target="_blank" aria-label="f">
+                    <svg class="header-contacts__icon">
+                        <use xlink:href="./assets/img/sprite.svg#facebook"></use>
+                    </svg>
+                </a>
+                <a href="https://twitter.com/" target="_blank" aria-label="f">
+                    <svg class="header-contacts__icon">
+                        <use xlink:href="./assets/img/sprite.svg#twitter"></use>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" aria-label="f">
+                    <svg class="header-contacts__icon">
+                        <use xlink:href="./assets/img/sprite.svg#instagram"></use>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+        <section class="header-slick">
+            <article class="header-slick__slide">
+                <picture>
+                    <source srcset="./assets/img/img-1.webp" type="image/webp">
+                    <img src="./assets/img/img-1.jpg" alt="slick-img" fetchpriority="high">
+                </picture>
+                <div class="header-slick__heading">
+                    <h2 class="header-slick__title">SIMPLE & MODERN</h2>
+                    <h3 class="header-slick__subtitle">WE MAKE THE WORLD BEAUTIFUL EVERYDAY</h3>
+                </div>
+            </article>
+    
+            <article class="header-slick__slide">
+                <picture>
+                    <source srcset="./assets/img/img-2.webp" type="image/webp">
+                    <img src="./assets/img/img-2.jpg" alt="slick-img" loading="lazy" fetchpriority="low">
+                </picture>
+                <div class="header-slick__heading">
+                    <h2 class="header-slick__title">STYLE & GRACE</h2>
+                    <h3 class="header-slick__subtitle">CREATING BEAUTY THAT INSPIRES.</h3>
+                </div>
+            </article>
+    
+            <article class="header-slick__slide">
+                <picture>
+                    <source srcset="./assets/img/img-3.webp" type="image/webp">
+                    <img src="./assets/img/img-3.jpg" alt="slick-img" loading="lazy" fetchpriority="low">
+                </picture>
+                <div class="header-slick__heading">
+                    <h2 class="header-slick__title">BEAUTY & POWER</h2>
+                    <h3 class="header-slick__subtitle">TURNING SIMPLICITY INTO ART</h3>
+                </div>
+            </article>
+    
+            <article class="header-slick__slide">
+                <picture>
+                    <source srcset="./assets/img/img-4.webp" type="image/webp">
+                    <img src="./assets/img/img-4.jpg" alt="slick-img" loading="lazy" fetchpriority="low">
+                </picture>
+                <div class="header-slick__heading">
+                    <h2 class="header-slick__title">ELEGANCE & SIMPLICITY</h2>
+                    <h3 class="header-slick__subtitle">INNOVATION FOR EVERY DAY.</h3>
+                </div>
+            </article>
+    
+            <article class="header-slick__slide">
+                <picture>
+                    <source srcset="./assets/img/img-5.webp" type="image/webp">
+                    <img src="./assets/img/img-5.jpg" alt="slick-img" loading="lazy" fetchpriority="low">
+                </picture>
+                <div class="header-slick__heading">
+                    <h2 class="header-slick__title">INNOVATION & ART</h2>
+                    <h3 class="header-slick__subtitle">DESIGN THAT EMPOWERS DREAMS.</h3>
+                </div>
+            </article>
+        </section>
+        <button class="header-btn"><img src="./assets/img/arrow.svg" alt="arrow" loading="lazy"></button>
+    </header>
+
+    <main class="main">
+
+        <section class="projects" id="projects">
+
+            <div class="projects-titles">
+                <h2 class="projects-titles__title">WHAT WE DO</h2>
+            </div>
+
+            <article class="projects-block">
+                <div class="projects-block__img">
+                    <div class="projects-block__rectangle"></div>
+                    <img src="./assets/img/img-6.webp" alt="" loading="lazy">
+                </div>
+                <div class="projects-block__paragr">
+                    <h3 class="projects-block__subtitle">ONE WORLD</h3>
+                    <h3 class="projects-block__title">TRADE CENTER</h3>
+                    <p class="projects-block__text">Increasing prosperity in our lives can be accomplished by having the right frame of mind.
+                        The truth is, our thoughts are very powerful.</p>
+                    <button class="projects-block__btn">MORE DETAILS</button>
+                    <p class="projects-block__location"><img src="./assets/img/location.svg" alt="" loading="lazy"> New York City, United States - 1776 feet
+                    </p>
+                </div>
+            </article>
+
+            <article class="projects-block">
+                <div class="projects-block__img">
+                    <div class="projects-block__rectangle"></div>
+                    <img src="./assets/img/img-7.webp" alt="" loading="lazy" fetchpriority="low">
+                </div>
+                <div class="projects-block__paragr">
+                    <h3 class="projects-block__subtitle">INTERNATIONAL</h3>
+                    <h3 class="projects-block__title">COMMERCE CENTRE</h3>
+                    <p class="projects-block__text">Successful businesses have many things in common, today we’ll look at the big ‘R’ of
+                        recognition and how a digital advertising network may help.</p>
+                    <button class="projects-block__btn">MORE DETAILS</button>
+                    <p class="projects-block__location"><img src="./assets/img/location.svg" alt="" loading="lazy"> Hong Kong - 1588 feet </p>
+                </div>
+            </article>
+
+        </section>
+
+        <section class="news" id="news">
+
+            <div class="news-titles">
+                <h2 class="news-titles__title">LATEST NEWS</h2>
+            </div>
+
+            <div class="news-slick">
+
+                <article class="news-slick__slide">
+                    <img src="./assets/img/img-8.webp" alt="slick-img" loading="lazy">
+                    <h3 class="news-slick__title">SEE THE UNMATCHED BEAUTY OF THE GREAT.</h3>
+                    <p class="news-slick__text">Free directories: directories are perfect for customers that are searching for...</p>
+                    <div class="news-slick__author">
+                        <img src="./assets/img/img-17.webp" alt="slick-author" loading="lazy">
+                        <div class="news-slick__info">
+                            <h4 class="news-slick__name">ALJA BRUN</h4>
+                            <p class="news-slick__year">20 Jan 2020</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="news-slick__slide">
+                    <img src="./assets/img/img-9.webp" alt="slick-img" loading="lazy">
+                    <h3 class="news-slick__title">EFFECTIVE ADVERTISING POINTERS.</h3>
+                    <p class="news-slick__text">Having a home based business is a wonderful asset to your life...</p>
+                    <div class="news-slick__author">
+                        <img src="./assets/img/img-18.webp" alt="slick-author" loading="lazy">
+                        <div class="news-slick__info">
+                            <h4 class="news-slick__name">DOMINIC FREEMAN</h4>
+                            <p class="news-slick__year">13 Dec 2019</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="news-slick__slide">
+                    <img src="./assets/img/img-10.webp" alt="slick-img" loading="lazy">
+                    <h3 class="news-slick__title">HYPNOTIZE YOURSELF INTO THE GHOST.</h3>
+                    <p class="news-slick__text">There are many things that are important to catalog design...</p>
+                    <div class="news-slick__author">
+                        <img src="./assets/img/img-19.webp" alt="slick-author" loading="lazy">
+                        <div class="news-slick__info">
+                            <h4 class="news-slick__name">ALICE WARD</h4>
+                            <p class="news-slick__year">30 Nov 2019</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="news-slick__slide">
+                    <img src="./assets/img/img-20.webp" alt="slick-img" loading="lazy">
+                    <h3 class="news-slick__title">SEE THE UNMATCHED BEAUTY OF THE WORLD.</h3>
+                    <p class="news-slick__text">Free directories: directories are perfect for customers that are searching for...</p>
+                    <div class="news-slick__author">
+                        <img src="./assets/img/img-22.webp" alt="slick-author" loading="lazy">
+                        <div class="news-slick__info">
+                            <h4 class="news-slick__name">JANE DOE</h4>
+                            <p class="news-slick__year">15 Feb 2023</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="news-slick__slide">
+                    <img src="./assets/img/img-21.webp" alt="slick-img" loading="lazy">
+                    <h3 class="news-slick__title">DISCOVER THE WONDERS OF NATURE.</h3>
+                    <p class="news-slick__text">Explore breathtaking landscapes and hidden gems around the globe...</p>
+                    <div class="news-slick__author">
+                        <img src="./assets/img/img-23.webp" alt="slick-author" loading="lazy">
+                        <div class="news-slick__info">
+                            <h4 class="news-slick__name">JOHN SMITH</h4>
+                            <p class="news-slick__year">8 Aug 2021</p>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="gallery">
+
+            <div class="gallery-titles">
+                <h2 class="gallery-titles__title">GALLERY</h2>
+            </div>
+
+            <article class="gallery-block">
+                <div class="gallery-block__image-big" style="background-image: url(./assets/img/img-11.webp);"></div>
+                <div class="gallery-block__image" style=" background-image: url(./assets/img/img-12.webp);"></div>
+                <div class="gallery-block__image" style="background-image: url(./assets/img/img-13.webp);"></div>
+                <div class="gallery-block__image" style="background-image: url(./assets/img/img-14.webp); "></div>
+                <div class="gallery-block__image" style="background-image: url(./assets/img/img-15.webp);"></div>
+                <button class="gallery-block__loupe"><img src="./assets/img/loupe.svg" alt="loupe" loading="lazy"></button>
+                <div class="gallery-modal">
+
+                    <div class="gallery-modal__content" style="background-image: url(./assets/img/img-11.webp);">
+                        <div class="gallery-modal__corner"></div>
+                        <div class="gallery-modal__corner"></div>
+                        <div class="gallery-modal__corner"></div>
+                        <div class="gallery-modal__corner"></div>
+                    </div>
+
+                    <button class="gallery-btn" id="close-modal">CLOSE</button>
+
+                </div>
+            </article>
+
+            <button class="gallery-btn">SEE MORE</button>
+
+        </section>
+
+        <section class="contacts" id="contacts">
+
+            <article class="contacts-map">
+                <img src="./assets/img/img-26.webp" alt="img" loading="lazy">
+            </article>
+
+            <article class="contacts-form">
+                </div>
+
+                <div class="contacts-titles">
+                    <h2 class="contacts-titles__title">GET IN TOUCH</h2>
+                </div>
+
+                <div class="contacts-block">
+
+                    <ul class="contacts-block__list">
+                        <li class="contacts-block__item">
+                            <img src="./assets/img/location.svg" alt="" loading="lazy"> 91 Nolan Extensions Suite 670
+                        </li>
+
+                        <li class="contacts-block__item">
+                            <img src="./assets/img/phone.svg" alt="" loading="lazy"> +001 356-868-2454
+                        </li>
+
+                        <li class="contacts-block__item">
+                            <img src="./assets/img/inbox.svg" alt="" loading="lazy"> montichello@service.com
+                        </li>
+
+                        <li class="contacts-block__item">
+                            <img src="./assets/img/location.svg" alt="" loading="lazy"> From 07:05AM to 19:30PM
+                        </li>
+
+                    </ul>
+
+                    <form class="form">
+                        <input type="text" id="name" maxlength="30" placeholder="Name" class="form__input">
+                        <input type="text" id="email" placeholder="Email" class="form__input">
+                        <input type="submit" class="form__btn" value="SUBMIT">
+                    </form>
+                </div>
+            </article>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <section class="footer-block">
+
+            <article class="footer-block__copy">
+                <img src="./assets/img/Logo.svg" alt="logo" loading="lazy">
+                <p class="footer-block__text">Copyrights © 2020 Montichello</p>
+            </article>
+
+            <article class="footer-block__contacts">
+
+                <a href="https://www.facebook.com/" target="_blank" aria-label="f">
+                    <svg class="header-contacts__icon">
+                        <use xlink:href="./assets/img/sprite.svg#facebook"></use>
+                    </svg>
+                </a>
+                <a href="https://twitter.com/" target="_blank" aria-label="f">
+                    <svg class="header-contacts__icon">
+                        <use xlink:href="./assets/img/sprite.svg#twitter"></use>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" aria-label="f">
+                    <svg class="header-contacts__icon">
+                        <use xlink:href="./assets/img/sprite.svg#instagram"></use>
+                    </svg>
+                </a>
+
+            </article>
+        </section>
+    </footer>
+
+    <script src="./js/jquery.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer></script>
+    <script src="js/slider.js" defer></script>
+    <script src="./js/script.js" defer></script>
+</body>
+
+</html>

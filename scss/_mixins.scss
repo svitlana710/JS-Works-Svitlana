@@ -1,0 +1,44 @@
+@mixin flex-center($justify: space-between, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin responsive-font($size, $family, $weight, $letter-spacing: 0, $line-height: 100%) {
+  font-size: $size;
+  font-family: $family;
+  font-weight: $weight;
+  letter-spacing: $letter-spacing;
+  line-height: $line-height;
+}
+
+@mixin circle($size, $border-color: #fff, $bg-color: transparent) {
+  width: $size;
+  height: $size;
+  border: 1px solid $border-color;
+  border-radius: 50%;
+  background-color: $bg-color;
+}
+
+@mixin flex-center($direction: column, $justify: center, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+@mixin font-style($font-family, $font-weight, $font-size, $color) {
+  font-family: $font-family;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  color: $color;
+}
+
+@mixin button-style($width, $height, $border-color) {
+  width: $width;
+  height: $height;
+  background-color: transparent;
+  border: 1px solid $border-color;
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: 14px;
+}

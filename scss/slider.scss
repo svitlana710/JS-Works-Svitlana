@@ -1,0 +1,140 @@
+.header-slick{
+
+    .slick-arrow{
+        display: none;
+        font-size: 0px;
+        position: absolute;
+        border: none;
+    }
+
+    .slick-dots {
+    width: 210px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    z-index: 4;
+    gap: 32px;
+    transform: rotate(90deg);
+
+    @media (max-width: 1550px){
+        position: absolute;
+        top: 350px;
+        left: 1348px;
+    }
+
+    @media (max-width: 768px){
+        position: absolute;
+        top: 330px;
+        left: 620px;
+    }
+
+    @media (max-width: 320px){
+        top: 400px;
+        left: 170px;
+    }
+
+
+    .slick-active{
+        background-color: #fff;
+    }
+
+    li{
+        border-radius: 100px;
+        width: 14px;
+        height: 14px;
+        font-size: 0px;
+        border: 1px solid #fff;
+        background-color: transparent;
+        
+
+        &:hover{
+            border: 3px solid #fff;
+            cursor: pointer;
+            transition: all ease-in-out .25s;
+        }
+    }
+
+    button{
+       display: none;
+    }
+}
+    
+}
+
+.news-slick{
+
+    .slick-arrow{
+            width: 40px;
+            height: 40px;
+            font-size: 0px;
+            border: 1px solid #fff;
+            border-radius: 50px;
+            background-color: transparent;
+            transform: rotate(90deg);
+            margin-right: 60px;
+            position: absolute;
+            z-index: 999;
+            top: 230px;
+            right: 1170px;
+
+            img{
+                width: 6px;
+                height: 16px;
+            }
+
+            &:nth-child(3){
+                transform: rotate(-90deg);
+                left: 1230px;
+            }
+    
+            &:hover{
+                width: 50px;
+                height: 50px;
+                cursor: pointer;
+                transition: all ease-in-out .3s;
+    
+                & img{
+                    width: 20px;
+                    height: auto;
+                    margin: auto;
+                    transition: all ease-in-out .3s;
+                }
+            }
+    }
+
+    .slick-dots{
+        display: flex;
+        justify-content: center;
+        gap: 32px;
+        position: relative;
+
+        li{
+            list-style: none;
+            border: 1px solid #fff;
+            border-radius: 50px;
+            width: 14px;
+            height: 14px;
+            background-color: transparent;
+
+            &:hover{
+                cursor: pointer;
+                border: 3px solid #fff;
+                transition: all ease-in-out .3s;
+            }
+        }
+
+        button{
+            display: none;
+        }
+
+        .slick-active{
+            background-color: #fff;
+        }
+
+        @media(max-width: 1550px){
+            position: absolute;
+            top: 540px;
+            left: 470px;
+        }
+    }
+}
