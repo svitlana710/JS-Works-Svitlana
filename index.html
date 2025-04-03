@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson_38</title>
+</head>
+<body>
+    <form id="search-form">
+        <label for="movie-name">Назва фільму:</label>
+        <input type="text" id="movie-name" name="movie-name">
+
+        <label for="movie-type">Тип:</label>
+        <select id="movie-type" name="movie-type">
+            <option value="movie">Фільм</option>
+            <option value="series">Серіал</option>
+            <option value="episode">Епізод</option>
+        </select>
+
+        <button type="submit">Пошук</button>
+    </form>
+
+    <div id="results">
+        </div>
+
+    <div id="movie-details">
+        </div>
+
+    <div id="pagination">
+        </div>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
